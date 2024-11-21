@@ -4,10 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Juego de Memoria - Didac & Sergi</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+  <!-- Video -->
+  <div class="video-background">
+    <video autoplay muted loop id="bgVideo">
+      <source src="images/video/goku.mp4" type="video/mp4">
+      Tu navegador no soporta la etiqueta video.
+    </video>
+  </div>
+  <!-- Juego -->
+  <div class="game-container">
+    <h1>Juego de Memoria - Jujutsu Kaisen</h1>
+    <div id="timer">Tiempo restante: 60s</div>
+    <!-- Tablero del juego (Tarjetas)) -->
+    <div class="game-board" id="gameBoard">
+    </div>
+  </div>
 
+  <!-- Modal de Game Over -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h2>Game Over.</h2>
+      <img class="game_over" src="" alt="Game Over">
+      <div class="buttons">
+        <button id="restartGame">Iniciar nueva partida</button>
+        <button id="closeGame">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Ganador -->
+  <div id="wonModal" class="modal">
+    <div class="modal-content">
+      <h2>¡Victoria!</h2>
+      <div class="buttons">
+        <button id="restartWonGame">Iniciar nueva partida</button>
+        <button id="closeWonGame">Cerrar</button>
+      </div>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>

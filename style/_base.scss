@@ -1,0 +1,32 @@
+@use 'variables';
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: variables.$background-color;
+  margin: 0;
+}
+
+h1, #timer {
+  color: variables.$light-color;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  margin: 10px;
+  border: none;
+  border-radius: variables.$border-radius;
+  cursor: pointer;
+  background-color: variables.$primary-color;
+  color: variables.$light-color;
+  transition: background-color variables.$transition-time, transform variables.$transition-time;
+
+  &:hover {
+    background-color: #555;
+    transform: scale(1.1);
+  }
+}

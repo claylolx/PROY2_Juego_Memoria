@@ -1,0 +1,35 @@
+@use 'variables';
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+.card {
+  width: 100px;
+  height: 130px;
+  background-image: url('../images/card.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &.flipped {
+    transform: rotateY(180deg);
+    background-image: none;
+    background-color: white;
+
+    img {
+      display: block;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: none;
+  }
+}
