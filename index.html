@@ -11,7 +11,7 @@
   <div class="video-background">
     <video autoplay muted loop id="bgVideo">
       <source src="images/video/goku.mp4" type="video/mp4">
-      Tu navegador no soporta la etiqueta video.
+      Tu navegador no soporta la etiqueta de video.
     </video>
   </div>
   <!-- Juego -->
@@ -20,65 +20,15 @@
     <div id="timer">Tiempo restante: 60s</div>
     <!-- Tablero del juego (Tarjetas)) -->
     <div class="game-board" id="gameBoard">
-            <!-- Cartas Estaticas de EJEMPLO (HAY QUE HACERLAS CON JAVASCRIPT) -->
-            <div class="card flipped" data-character="jogo">
-              <img src="images/easy/jogo.jpg" alt="jogo">
-            </div>
-            <div class="card flipped" data-character="itadori">
-              <img src="images/easy/itadori.jpg" alt="itadori">
-            </div>
-            <div class="card" data-character="mahito">
-              <img src="images/easy/mahito.jpg" alt="mahito">
-            </div>
-            <div class="card" data-character="megumi">
-              <img src="images/easy/megumi.jpg" alt="megumi">
-            </div>
-            <div class="card" data-character="giyu">
-              <img src="images/easy/giyu.jpg" alt="giyu">
-            </div>
-            <div class="card" data-character="nobara">
-              <img src="images/easy/nobara.jpg" alt="nobara">
-            </div>
-            <div class="card" data-character="toge">
-              <img src="images/easy/toge.jpg" alt="toge">
-            </div>
-            <div class="card" data-character="toji">
-              <img src="images/easy/toji.jpg" alt="toji">
-            </div>
-            <!-- Copias para los pares -->
-            <div class="card flipped" data-character="jogo">
-              <img src="images/easy/jogo.jpg" alt="jogo">
-            </div>
-            <div class="card flipped" data-character="itadori">
-              <img src="images/easy/itadori.jpg" alt="itadori">
-            </div>
-            <div class="card" data-character="mahito">
-              <img src="images/easy/mahito.jpg" alt="mahito">
-            </div>
-            <div class="card" data-character="megumi">
-              <img src="images/easy/megumi.jpg" alt="megumi">
-            </div>
-            <div class="card" data-character="giyu">
-              <img src="images/easy/giyu.jpg" alt="giyu">
-            </div>
-            <div class="card" data-character="nobara">
-              <img src="images/easy/nobara.jpg" alt="nobara">
-            </div>
-            <div class="card" data-character="toge">
-              <img src="images/easy/toge.jpg" alt="toge">
-            </div>
-            <div class="card" data-character="toji">
-              <img src="images/easy/toji.jpg" alt="toji">
-            </div>
-          </div>
     </div>
   </div>
 
   <!-- Modal de Game Over -->
   <div id="modal" class="modal">
     <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
       <h2>Game Over.</h2>
-      <img class="game_over" src="" alt="Game Over">
+      <img class="game_over" src="images/game_over_animation.gif" alt="Game Over">
       <div class="buttons">
         <button id="restartGame">Iniciar nueva partida</button>
         <button id="closeGame">Cerrar</button>
@@ -89,6 +39,7 @@
   <!-- Modal de Ganador -->
   <div id="wonModal" class="modal">
     <div class="modal-content">
+      <span class="close" id="closeWonModal">&times;</span>
       <h2>¡Victoria!</h2>
       <div class="buttons">
         <button id="restartWonGame">Iniciar nueva partida</button>
