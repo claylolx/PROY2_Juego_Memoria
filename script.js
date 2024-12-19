@@ -61,7 +61,47 @@ function flipCard() {
     }
 }
 
+// Función para comprobar si las tarjetas volteadas coinciden
+function checkForMatch() {
+    const [card1, card2] = flippedCards; // Obtener las dos tarjetas volteadas
+    if (card1.dataset.character === card2.dataset.character) { // Comprobar si los personajes coinciden
+        matchedPairs++; // Incrementar el contador de pares coincidentes
+        if (matchedPairs === characters.length) { // Si se han encontrado todos los pares
+            clearInterval(timer); // Detener el temporizador
+            setTimeout(() => alert('¡Ganaste!'), 500); // Mostrar una alerta de victoria después de 500 ms
+        }
+        flippedCards = []; // Vaciar el array de tarjetas volteadas
+    } else {
+        setTimeout(() => { // Si las tarjetas no coinciden
+            card1.classList.remove('flipped'); // Quitar la clase 'flipped' de la primera tarjeta
+            card2.classList.remove('flipped'); // Quitar la clase 'flipped' de la segunda tarjeta
+            flippedCards = []; // Vaciar el array de tarjetas volteadas
+        }, 1000); // Después de 1 segundo
+    }
+}
 
+// Función para mostrar el modal de fin del juego
+function showModal() {
+    modal.style.display = 'block'; // Mostrar el modal
+}
+
+closeModal.onclick = function() {
+    modal.style.display = 'none'; // Ocultar el modal al hacer clic en el botón de cerrar
+}
+
+restartGame.onclick = function() {
+    location.reload(); // Recargar la página para reiniciar el juego
+}
+
+closeGame.onclick = function() {
+    window.close(); // Cerrar la ventana del navegador
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) { // Si se hace clic fuera del contenido del modal
+        modal.style.display = 'none'; // Ocultar el modal
+    }
+}
 
 createBoard();
 
