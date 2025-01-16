@@ -1,7 +1,7 @@
 {
     "name": "Juego de Memoria",
     "short_name": "Memoria",
-    "start_url": "./index.html",
+    "start_url": "start_url",
     "display": "standalone",
     "background_color": "#f0f0f0",
     "theme_color": "#8B0000",
