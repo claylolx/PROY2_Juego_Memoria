@@ -1,13 +1,10 @@
 {
-    "name": "Memory Card Game",
-    "short_name": "MemoryGame",
-    "description": "Un divertido juego de memoria donde debes emparejar cartas antes de que se acabe el tiempo.",
+    "name": "Juego de Memoria",
+    "short_name": "Memoria",
     "start_url": "/index.html",
-    "scope": "/",
     "display": "standalone",
     "background_color": "#f0f0f0",
     "theme_color": "#8B0000",
-    "orientation": "portrait",
     "icons": [
       {
         "src": "images/icon-192x192.png",
@@ -19,10 +16,6 @@
         "sizes": "512x512",
         "type": "image/png"
       }
-    ],
-    "categories": ["game", "puzzle", "entertainment"],
-    "permissions": [],
-    "dir": "ltr",
-    "lang": "es"
+    ]
   }
   
